@@ -1,4 +1,4 @@
-package client
+package main
 
 import (
 	"flag"
@@ -24,7 +24,7 @@ func main() {
 
 	err := s.Switch()
 	if err != nil {
-		fmt.Printf("cmd switch error: %s")
+		fmt.Printf("cmd switch error: %s", err)
 		os.Exit(2)
 	}
 }
