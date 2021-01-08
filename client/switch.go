@@ -186,8 +186,8 @@ func (s Switch) reminderFlags(f *flag.FlagSet) (*string, *string, *time.Duration
 	f.StringVar(&t, "t", "", "Reminder title")
 	f.StringVar(&m, "message", "", "Reminder Message")
 	f.StringVar(&m, "m", "", "Reminder Message")
-	f.StringVar(&m, "duration", "", "Reminder Time")
-	f.StringVar(&m, "d", "", "Reminder Time")
+	f.DurationVar(&d, "duration", 0, "Reminder Time")
+	f.DurationVar(&d, "d", 0, "Reminder Time")
 	return &t, &m, &d
 }
 
