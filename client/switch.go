@@ -30,7 +30,7 @@ type BackendHTTPClient interface {
 func NewSwitch(uri string) Switch {
 	httpClient := NewHTTPClient(uri)
 	s := Switch{
-		client:        httpClient.BackendURI,
+		client:        httpClient,
 		backendAPIURL: uri,
 	}
 	s.commands = map[string]func() func(string) error{

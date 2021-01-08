@@ -33,7 +33,6 @@ func (c HTTPClient) Fetch(ids []string) ([]byte, error) {
 }
 
 func (c HTTPClient) Delete(ids []string) error {
-	res := []byte(`response for deleting reminder(s)`)
 	return nil
 }
 
